@@ -8,7 +8,7 @@ KEY=$KEY_PATH/$KEY_NAME
 if [ -s "$KEY.pem" ] && [ -s "$KEY.pub" ] && [ -z "$EXISTING_KEY" ]; then
     echo Using existing key pair
 else
-    rm -rf $KEY*
+    rm -rf $KEY*.pub $KEY*.pem
     mkdir -p $KEY_PATH
 
     if [ -z "$EXISTING_KEY" ]; then
